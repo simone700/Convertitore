@@ -22,14 +22,34 @@ namespace ConversioniTraBasi
                 }
                 if (resto == 14)
                 {
+                    resto = numero % valorebase;
+                    if (resto == 13)
+                    {
 
-                    valore_convertito = "f" + valore_convertito;
+                        valore_convertito = "f" + valore_convertito;
+                        if (resto == 12)
+                        {
+
+                            valore_convertito = "f" + valore_convertito;
+                        }
+                        valore_convertito = "f" + valore_convertito;
+                    }
+                    if (resto == 11)
+                    {
+
+                        valore_convertito = "f" + valore_convertito;
+                    }
+                    if (resto == 10)
+                    {
+
+                        valore_convertito = "f" + valore_convertito;
+                    }
+                    numero = numero / valorebase;
+                    valore_convertito = Convert.ToString(resto) + valore_convertito;
                 }
-                numero = numero / valorebase;
-                valore_convertito = Convert.ToString(resto) + valore_convertito;
+                Console.WriteLine($"il numero binario é {valore_convertito}");
+                Console.ReadLine();
             }
-            Console.WriteLine($"il numero binario é {valore_convertito}");
-            Console.ReadLine();
         }
     }
 }
